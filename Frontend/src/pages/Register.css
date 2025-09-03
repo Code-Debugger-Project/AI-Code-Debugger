@@ -1,0 +1,406 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Auth Page Container (scoped to Register page) - Modified for precise centering */
+.register-page.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  /* Set background image */
+  background-image: url('../assets/Register_background_img.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add an overlay for better contrast if needed (scoped) */
+.register-page.auth-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+/* Container for precise positioning in the middle box */
+.register-page .auth-page__container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  /* Precise positioning to match the center monitor exactly */
+  transform: translate(0, -8vh);
+}
+
+/* Auth Form (Transparent Glassmorphism) - Compact and optimized for center monitor */
+.register-page .auth-form {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid rgba(100, 116, 139, 0.3);
+  border-radius: 12px;
+  padding: 0.5rem 1.75rem 0.3rem; /* Further reduced top and bottom padding */
+  box-shadow: 
+    0 0 30px rgba(59, 130, 246, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  /* Compact height to fit monitor perfectly */
+  min-height: 300px; /* Further reduced from 320px */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Changed to space-between for better distribution */
+}
+
+/* Form Header - Compact spacing */
+.register-page .auth-form__header {
+  text-align: center;
+  margin-bottom: 0.4rem; /* Reduced from 0.6rem */
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem; /* Reduced gap */
+}
+
+/* Logo and text container */
+.register-page .auth-form__header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem; /* Reduced from 0.75rem */
+}
+
+/* Logo styling - sized for center monitor */
+.register-page .auth-form__logo {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3));
+  flex-shrink: 0;
+}
+
+/* Text container for title and subtitle */
+.register-page .auth-form__text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem; /* Reduced gap */
+}
+
+/* Header text - sized for center monitor */
+.register-page .auth-form__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.register-page .auth-form__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  margin: 0;
+}
+
+/* Input styling - compact spacing */
+.register-page .auth-form__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Reduced from 0.3rem */
+  margin-bottom: 0.3rem; /* Reduced from 0.4rem */
+  position: relative;
+  z-index: 2;
+}
+
+.register-page .auth-form__input {
+  width: 100%;
+  padding: 0.6rem 1rem; /* Reduced padding from 0.75rem */
+  border: 1.5px solid rgba(100, 116, 139, 0.4);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.register-page .auth-form__input:focus {
+  outline: none;
+  border-color: rgba(59, 130, 246, 0.8);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.register-page .auth-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Error styling - compact */
+.register-page .auth-form__error {
+  background: rgba(245, 101, 101, 0.25);
+  border: 1px solid rgba(245, 101, 101, 0.4);
+  color: #ffffff;
+  padding: 0.3rem; /* Reduced padding from 0.4rem */
+  border-radius: 8px;
+  margin-bottom: 0.3rem; /* Reduced margin from 0.4rem */
+  font-size: 0.85rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Form Actions - compact spacing */
+.register-page .auth-form__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem; /* Already at minimum reasonable gap */
+  margin-bottom: 0.1rem; /* Reduced from 0.2rem */
+  position: relative;
+  z-index: 2;
+}
+
+/* Button styling - compact */
+.register-page .auth-form__button {
+  width: 100%;
+  padding: 0.6rem; /* Reduced padding from 0.75rem */
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(147, 51, 234, 0.9) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-page .auth-form__button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 1) 0%, rgba(147, 51, 234, 1) 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+}
+
+.register-page .auth-form__button:hover::before {
+  opacity: 1;
+}
+
+.register-page .auth-form__button span {
+  position: relative;
+  z-index: 2;
+}
+
+.register-page .auth-form__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.register-page .auth-form__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Form Footer - minimal spacing */
+.register-page .auth-form__footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 2;
+  margin-top: 0; /* Removed margin */
+  padding-top: 0; /* No extra padding */
+}
+
+.register-page .auth-form__link {
+  color: #4fd1c7;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.register-page .auth-form__link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background: #4fd1c7;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease;
+}
+
+.register-page .auth-form__link:hover {
+  color: #68d391;
+}
+
+.register-page .auth-form__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  background: #68d391;
+}
+
+/* Responsive Design - Adapted for center monitor positioning */
+@media (max-width: 768px) {
+  .register-page .auth-page__container {
+    max-width: 380px;
+    transform: translate(0, -6vh);
+  }
+  
+  .register-page .auth-form {
+    padding: 0.4rem 1.25rem 0.2rem; /* Further reduced top and bottom padding */
+    min-height: 260px; /* Further reduced from 280px */
+  }
+}
+
+@media (max-width: 480px) {
+  .register-page.auth-page {
+    min-height: 100vh;
+    padding: 1rem;
+  }
+
+  .register-page .auth-page__container {
+    max-width: 340px;
+    transform: none;
+  }
+
+  .register-page .auth-form {
+    padding: 0.2rem 1rem 0.1rem; /* Further reduced top and bottom padding */
+    min-height: 200px; /* Further reduced from 230px */
+  }
+
+  .register-page .auth-form__title {
+    font-size: 1.4rem;
+  }
+
+  .register-page .auth-form__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .register-page .auth-form__header {
+    gap: 0.1rem; /* Reduced gap */
+    flex-direction: column;
+  }
+
+  .register-page .auth-form__text-content {
+    align-items: center;
+  }
+
+  .register-page .auth-form__input {
+    padding: 0.4rem; /* Reduced from 0.65rem */
+    font-size: 0.9rem;
+  }
+
+  .register-page .auth-form__input-group {
+    gap: 0.5rem; /* Reduced gap */
+  }
+
+  .register-page .auth-form__actions {
+    gap: 0.5rem; /* Reduced gap */
+  }
+
+  .register-page .auth-form__button {
+    padding: 0.4rem; /* Reduced from 0.65rem */
+  }
+}
+
+/* Dark mode support - optimized for middle box */
+@media (prefers-color-scheme: dark) {
+  .register-page.auth-page {
+    background-image: url('/src/assets/Registration background image.jpeg');
+  }
+
+  .register-page .auth-form {
+    background: rgba(26, 32, 44, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .register-page .auth-form__title {
+    color: #f7fafc;
+  }
+
+  .register-page .auth-form__subtitle {
+    color: rgba(247, 250, 252, 0.8);
+  }
+
+  .register-page .auth-form__input {
+    background: rgba(26, 32, 44, 0.3);
+    border-color: rgba(74, 85, 104, 0.4);
+    color: #f7fafc;
+  }
+
+  .register-page .auth-form__input:focus {
+    border-color: rgba(77, 209, 199, 0.7);
+    background: rgba(26, 32, 44, 0.4);
+  }
+
+  .register-page .auth-form__input::placeholder {
+    color: rgba(247, 250, 252, 0.45);
+  }
+
+  .register-page .auth-form__footer {
+    color: rgba(247, 250, 252, 0.8);
+  }
+
+  .register-page .auth-form__link {
+    color: #4fd1c7;
+  }
+}
+
+/* Animation for form entrance */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-page .auth-form {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Floating elements animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}

@@ -1,0 +1,261 @@
+/* Common container styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Chat history styles */
+.chat-history {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  max-height: calc(60vh - 100px);
+  padding-right: 8px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chat-history::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message-response-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: flex-start;
+  max-width: 80%;
+}
+
+.message-prompt {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  align-self: flex-end;
+  max-width: 80%;
+}
+
+.message-response {
+  flex: 1; /* Allow response to take available space */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word; /* Older browsers */
+  overflow-wrap: break-word; /* Standard */
+  box-sizing: border-box;
+}
+
+.code-block-with-copy {
+  position: relative; /* Needed for absolute positioning of button */
+  margin: 10px 0; /* Add margin around code blocks */
+  background: #2d2d2d; /* Dark background for code */
+  border-radius: 8px;
+  padding: 15px; /* Adjust padding to make space for button */
+  padding-top: 35px; /* Extra space at the top for the button */
+  overflow-x: auto; /* Add horizontal scroll for long lines */
+}
+
+.message-response pre {
+  margin: 0; /* Remove default pre margin */
+  padding: 0; /* Remove default pre padding */
+  background: none; /* Remove background from pre */
+  color: #f8f8f2; /* Light text color */
+  white-space: pre-wrap;
+  word-wrap: break-word; /* Older browsers */
+  overflow-wrap: break-word; /* Standard */
+}
+
+.message-response pre code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+}
+
+.message-response p {
+  margin: 10px 0; /* Add margin around text paragraphs */
+  line-height: 1.6;
+  color: #ddd; /* Slightly lighter text color for paragraphs */
+}
+
+/* Response box styles */
+.response-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 60vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.response-box pre {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Error message styles */
+.error-message {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Form and input styles */
+.prompt-form {
+  margin-top: auto;
+  width: 100%;
+}
+
+.prompt-input-area {
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-input {
+  flex: 1;
+  background: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+}
+
+.prompt-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Button styles */
+.send-button {
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.send-button:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.send-button:not(:disabled):hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.copy-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s;
+  flex-shrink: 0; /* Prevent button from shrinking */
+  color: #bfcfff; /* Icon color */
+}
+
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.copy-button:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.copy-button svg {
+  display: block;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.15); /* Slightly different background */
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px; /* Smaller padding */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px; /* Smaller text size */
+  color: #bfcfff;
+  transition: background 0.18s;
+  z-index: 1; /* Ensure button is above code */
+}
+
+.copy-code-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.copy-code-button:active {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.copy-code-button svg {
+  width: 14px; /* Smaller icon size */
+  height: 14px;
+  display: block;
+}
+
+.main-content-title {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+} 
