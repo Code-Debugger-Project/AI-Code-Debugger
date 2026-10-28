@@ -9,7 +9,7 @@ You can watch the project walkthrough here:
 - https://lnkd.in/p/dK2sCZUG
 
 
-- https://raw.githubusercontent.com/Code-Debugger-Project/Code-Debugger/srija/Frontend/src/assets/AI%20Code%20Debugger%20Video.mp4" 
+- https://raw.githubusercontent.com/Code-Debugger-Project/AI-Code-Debugger/srija/Frontend/src/assets/AI%20Code%20Debugger%20Video.mp4" 
 
 > I have embedded this video directly in the `Frontend/src/assets/AI Code Debugger Video.mp4` file in the repository for your reference.
 
