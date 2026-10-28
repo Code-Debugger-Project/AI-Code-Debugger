@@ -6,7 +6,7 @@ CodeDebugger is an AI-powered coding assistant that helps developers debug error
 
 You can watch the project walkthrough here:
 
-- [Watch the project walkthrough video](https://lnkd.in/p/dK2sCZUG)
+- https://lnkd.in/p/dK2sCZUG
 
 If you want the video to play directly inside the README on GitHub, use a direct video file URL and embed it with HTML, for example:
 
