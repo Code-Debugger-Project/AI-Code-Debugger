@@ -6,16 +6,12 @@ CodeDebugger is an AI-powered coding assistant that helps developers debug error
 
 You can watch the project walkthrough here:
 
-- [Watch the project walkthrough video](https://lnkd.in/p/dK2sCZUG)
+- https://lnkd.in/p/dK2sCZUG
 
-<p align="center">
-  <video width="960" height="540" controls>
-    <source src="https://raw.githubusercontent.com/Code-Debugger-Project/Code-Debugger/srija/Frontend/src/assets/AI%20Code%20Debugger%20Video.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</p>
 
-> This video is embedded directly from the `Frontend/src/assets/AI Code Debugger Video.mp4` file in the repository.
+- https://raw.githubusercontent.com/Code-Debugger-Project/Code-Debugger/srija/Frontend/src/assets/AI%20Code%20Debugger%20Video.mp4" 
+
+> I have embedded this video directly in the `Frontend/src/assets/AI Code Debugger Video.mp4` file in the repository for your reference.
 
 ## Project Overview
 
