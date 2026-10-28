@@ -4,9 +4,22 @@ CodeDebugger is an AI-powered coding assistant that helps developers debug error
 
 ## Demo Video
 
-Watch the project walkthrough here:
+You can watch the project walkthrough here:
 
-https://lnkd.in/p/dK2sCZUG
+- [Watch the project walkthrough video](https://lnkd.in/p/dK2sCZUG)
+
+If you want the video to play directly inside the README on GitHub, use a direct video file URL and embed it with HTML, for example:
+
+```html
+<p align="center">
+  <video width="960" height="540" controls>
+    <source src="https://your-direct-video-url.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</p>
+```
+
+> Note: GitHub does not play shortened links like `lnkd.in` directly inside Markdown. For inline playback, use a direct `.mp4` URL or upload the video to GitHub/Google Drive and use that direct file link.
 
 ## Project Overview
 
@@ -20,7 +33,7 @@ CodeDebugger is designed to help software developers in real time by providing:
 
 The app is split into two main parts:
 
-- Frontend: React + Vite 
+- Frontend: React + Vite
 - Backend: Express server that communicates with the OpenAI API
 
 ## Features
@@ -138,9 +151,18 @@ Code-Debugger/
 ```bash
 cd Backend
 npm install
-create a .env file with:
+```
+
+Create a `.env` file inside `Backend`:
+
+```env
 OPENAI_API_KEY=your_openai_api_key
 PORT=5001
+```
+
+Then start the backend:
+
+```bash
 npm start
 ```
 
@@ -189,11 +211,13 @@ The backend exposes:
 
 ## License
 
-This project is currently for educational and portfolio/demo purposes.
+This project is open to use by anyone for learning, modification, and development purposes. There are no restrictions on using this project.
 
 ## Author
 
-CodeDebugger project by the repository contributors.
+- Project Owner: MUNDRU SAI SRIJA
+- GitHub: @Srija0770
+- Role: Project Owner and Developer
 
 ## Summary
 
