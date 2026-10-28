@@ -20,7 +20,7 @@ CodeDebugger is designed to help software developers in real time by providing:
 
 The app is split into two main parts:
 
-- Frontend: React + Vite single-page application
+- Frontend: React + Vite 
 - Backend: Express server that communicates with the OpenAI API
 
 ## Features
