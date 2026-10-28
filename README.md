@@ -6,20 +6,16 @@ CodeDebugger is an AI-powered coding assistant that helps developers debug error
 
 You can watch the project walkthrough here:
 
-- https://lnkd.in/p/dK2sCZUG
+- [Watch the project walkthrough video](https://lnkd.in/p/dK2sCZUG)
 
-If you want the video to play directly inside the README on GitHub, use a direct video file URL and embed it with HTML, for example:
-
-```html
 <p align="center">
   <video width="960" height="540" controls>
-    <source src="https://your-direct-video-url.mp4" type="video/mp4" />
+    <source src="https://raw.githubusercontent.com/Code-Debugger-Project/Code-Debugger/srija/Frontend/src/assets/AI%20Code%20Debugger%20Video.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </p>
-```
 
-> Note: GitHub does not play shortened links like `lnkd.in` directly inside Markdown. For inline playback, use a direct `.mp4` URL or upload the video to GitHub/Google Drive and use that direct file link.
+> This video is embedded directly from the `Frontend/src/assets/AI Code Debugger Video.mp4` file in the repository.
 
 ## Project Overview
 
